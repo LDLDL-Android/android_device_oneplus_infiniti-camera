@@ -1,4 +1,9 @@
 # Camera
+# APS logging and camera-process state use the existing camera data permissions.
+# Generic vendor_data_file labels make the logger retry file opens continuously.
+/data/vendor/cam_alog(/.*)?    u:object_r:vendor_camera_data_file:s0
+/data/vendor/camera_process(/.*)?    u:object_r:vendor_camera_data_file:s0
+
 /(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.cryptoeng@1\.0-service    u:object_r:vendor_hal_cryptoeng_oplus_exec:s0
 
 /(vendor|odm)/lib(64)?/cache\.so    u:object_r:same_process_hal_file:s0
