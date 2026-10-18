@@ -17,6 +17,15 @@ $(call inherit-product-if-exists, device/oneplus/infiniti-camera/opluscamera.mk)
 
 ### How to extract proprietary files?
 
+The fixups target OnePlus 15 `CPH2745_16.0.10.601(EX01)`, the build used by
+the LineageOS infiniti/sm8850-common vendor trees. Other builds may move
+obfuscated code; the fixups then stop with an error instead of silently
+skipping.
+
+The dump must contain one directory per partition (`system`, `system_ext`,
+`product`, `vendor`, `odm`, `my_product`, `my_stock`, ...). For the
+system-as-root `system` image, use its inner `system/` directory.
+
 From the ROM source root, place or clone this repo at `device/oneplus/infiniti-camera`,
 then run:
 
