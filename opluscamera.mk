@@ -80,9 +80,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.camera.private.log.enable=debug,pre,mp \
     ro.build.version.module.sub_api=2 \
     ro.build.version.oplus.api=38 \
-    ro.build.version.oplus.sub_api=47 \
+    ro.build.version.oplus.sub_api=50 \
     ro.build.version.oplusrom=V16.1.0 \
-    ro.build.version.oplusrom.display=16.0.8 \
+    ro.build.version.oplusrom.display=16.0.10 \
     ro.build.version.oplusrom.confidential=V16.1.0 \
     ro.com.google.lens.oem_camera_package=com.oplus.camera \
     ro.com.google.lens.oem_image_package=com.oneplus.gallery,com.oplus.screenshot \
@@ -124,7 +124,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.build.version.oplus.api=38 \
-    ro.build.version.oplus.sub_api=47 \
+    ro.build.version.oplus.sub_api=50 \
     ro.vendor.oplus.vendorxml.enable=1
 
 # Photo

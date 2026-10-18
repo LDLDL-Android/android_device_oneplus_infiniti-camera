@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 15 (OxygenOS 16 CPH2745_11_A.01)
+## are from OnePlus 15 (CPH2745_16.0.10.601(EX01)).
 
 # Camera
 my_product/app/OplusCamera/OplusCamera.apk:system_ext/priv-app/OplusCamera/OplusCamera.apk;OVERRIDES=Camera2,GoogleCameraGo
@@ -269,9 +269,8 @@ my_product/app/AONService/lib/arm64/libmemoryhelper.so:product/lib64/libmemoryhe
 my_product/overlay/aon.frameworkres.overlay.product.apk:product/overlay/aon.frameworkres.overlay.product.apk;EXTRACT_ONLY;FILEGROUP=aon_frameworkres_overlay_apk
 my_stock/app/OpenCapabilityService/OpenCapabilityService.apk:system_ext/app/OpenCapabilityService/OpenCapabilityService.apk
 system_ext/priv-app/StdID/StdID.apk
-my_stock/app/StdSP/StdSP.apk:system_ext/app/StdSP/StdSP.apk
+my_stock/priv-app/StdSP/StdSP.apk:system_ext/app/StdSP/StdSP.apk
 my_stock/app/MCS/MCS.apk:system_ext/app/MCS/MCS.apk
-my_stock/app/MCS/lib/arm64/libdcc_cipher.so:system_ext/lib64/libdcc_cipher_mcs.so;MODULE_SUFFIX=_mcs;DISABLE_DEPS;SYMLINK=system_ext/app/MCS/lib/arm64/libdcc_cipher.so
 my_stock/app/MCS/lib/arm64/libheytap_mcs_cipheralgo_fixed.so:system_ext/lib64/libheytap_mcs_cipheralgo_fixed.so;MODULE_SUFFIX=_mcs;DISABLE_DEPS;SYMLINK=system_ext/app/MCS/lib/arm64/libheytap_mcs_cipheralgo_fixed.so
 my_stock/app/MCS/lib/arm64/libmmkv.so:system_ext/lib64/libmmkv_mcs.so;MODULE_SUFFIX=_mcs;DISABLE_DEPS;SYMLINK=system_ext/app/MCS/lib/arm64/libmmkv.so
 my_stock/app/MCS/lib/arm64/liboplus_conscrypt_jni.so:system_ext/lib64/liboplus_conscrypt_jni.so;MODULE_SUFFIX=_mcs;DISABLE_DEPS;SYMLINK=system_ext/app/MCS/lib/arm64/liboplus_conscrypt_jni.so
@@ -320,7 +319,6 @@ my_product/lib64/libMsEffectSdk.so:system_ext/lib64/libMsEffectSdk.so
 my_product/lib64/liblivephoto.frc.jni.so:system_ext/lib64/liblivephoto.frc.jni.so;DISABLE_CHECKELF
 
 system/lib64/vendor.oplus.hardware.cameraextension@1.0.so
-system/lib64/vendor.oplus.hardware.cameraextension-V1-ndk.so
 system/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk.so;MODULE_SUFFIX=_system
 odm/lib64/hw/camera.oemlayer.v2.so
 system_ext/lib64/libbsproxy.so
