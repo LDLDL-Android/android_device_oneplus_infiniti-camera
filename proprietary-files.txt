@@ -323,6 +323,7 @@ system/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk.so;MODULE_SUFFIX=_system
 odm/lib64/hw/camera.oemlayer.v2.so
 system_ext/lib64/libbsproxy.so
 system_ext/lib64/libcsextimpl.so;DISABLE_CHECKELF
+system_ext/lib64/liboplus-uah-client.so;MODULE_SUFFIX=_system_ext
 system_ext/lib64/vendor.oplus.hardware.cameraMDM@1.0.so
 
 # Camera vendor runtime not shipped by the LineageOS device trees

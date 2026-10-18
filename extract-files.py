@@ -51,6 +51,7 @@ def lib_fixup_system_ext_suffix(lib: str, partition: str, *args, **kwargs):
         'libYTCommon',
         'libmpbase',
         'libextendfile',
+        'liboplus-uah-client',
     }
 
     return f'{lib}_system_ext' if lib in system_ext_libs else None
@@ -6270,6 +6271,7 @@ lib_fixups: lib_fixups_user_type = {
         'libYTCommon',
         'libmpbase',
         'libextendfile',
+        'liboplus-uah-client',
     ): lib_fixup_system_ext_suffix,
 }
 
