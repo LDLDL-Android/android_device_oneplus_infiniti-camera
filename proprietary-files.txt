@@ -324,3 +324,19 @@ odm/lib64/hw/camera.oemlayer.v2.so
 system_ext/lib64/libbsproxy.so
 system_ext/lib64/libcsextimpl.so;DISABLE_CHECKELF
 system_ext/lib64/vendor.oplus.hardware.cameraMDM@1.0.so
+
+# Camera vendor runtime not shipped by the LineageOS device trees
+odm/bin/occe_create
+odm/etc/init/occe_create.rc
+odm/etc/camera/singleblur/license_release.license
+odm/lib64/libAncHumanSegFigureFusion.so
+odm/lib64/libPDParamParser.so
+
+# Export camera processing libs to stock apps
+vendor/etc/public.libraries.txt
+
+# Oplus feature flags read by the stock apps
+my_product/etc/extension/com.oplus.oplus-feature.xml:product/etc/extension/com.oplus.oplus-feature.xml
+my_product/etc/permissions/oplus.feature.android.xml:product/etc/permissions/oplus.feature.android.xml
+my_product/etc/permissions/oplus.product.feature_multimedia_unique.xml:product/etc/permissions/oplus.product.feature_multimedia_unique.xml
+my_product/etc/permissions/oplus.product.features_multimedia_common.xml:product/etc/permissions/oplus.product.features_multimedia_common.xml

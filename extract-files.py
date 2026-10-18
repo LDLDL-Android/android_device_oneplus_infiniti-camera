@@ -6693,6 +6693,25 @@ def blob_fixup_filemanager_safecheck_direct(ctx, file, file_path, *args, tmp_dir
 
 
 blob_fixups: blob_fixups_user_type = {
+    # Same as the LineageOS infiniti tree does for its ODM camera libs.
+    'odm/lib64/libAncHumanSegFigureFusion.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
+    # Overrides the sm8850-common copy: opluscamera.mk is inherited first.
+    'vendor/etc/public.libraries.txt': blob_fixup()
+        .add_line_if_missing('libarcsoft_hdr_couple_api.so')
+        .add_line_if_missing('libarcsoft_high_dynamic_range_couple.so')
+        .add_line_if_missing('libarcsoft_smart_denoise.so')
+        .add_line_if_missing('libarcsoft_turbo_hdr_raw.so')
+        .add_line_if_missing('libarcsoft_turbo_raw.so')
+        .add_line_if_missing('libarcsoft_qnnhtp.so')
+        .add_line_if_missing('libQnnHtp.so')
+        .add_line_if_missing('libQnnSystem.so')
+        .add_line_if_missing('libQnnHtpV81Stub.so')
+        .add_line_if_missing('libQnnGpu.so'),
     'system_ext/lib64/libNativeWinBuffExchange.so': blob_fixup()
         .call(blob_fixup_nativewinbuff_android17),
     # The stock camera extension has no dynamic imports from provider-V3 or
