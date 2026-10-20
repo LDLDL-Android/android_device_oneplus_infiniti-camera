@@ -6,6 +6,7 @@ allow hal_camera_default aac_drc_prop:file { open read getattr map };
 allow hal_camera_default ab_update_gki_prop:file { open read getattr map };
 allow hal_camera_default adaptive_haptics_prop:file { open read getattr map };
 dontaudit hal_camera_default default_prop:file { open read getattr map };
+get_prop(hal_camera_default, vendor_gpu_prop)
 
 # /proc/boost_pool/camera
 allow hal_camera_default proc:file { write open getattr };

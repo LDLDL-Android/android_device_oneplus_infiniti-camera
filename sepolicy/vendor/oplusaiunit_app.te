@@ -4,6 +4,7 @@ get_prop(oplusaiunit_app, vendor_camera_prop)
 dontaudit oplusaiunit_app adsprpcd_file:file read;
 allow oplusaiunit_app vendor_qdsp_device:chr_file { ioctl read };
 allow oplusaiunit_app vendor_file:dir watch;
+dontaudit oplusaiunit_app vendor_gpu_prop:file read;
 
 # The cloud_aigc_sdinpainting worker calls Oplus Cryptoeng before submitting
 # its request. The Permissive cross-check recorded a denied binder call here.

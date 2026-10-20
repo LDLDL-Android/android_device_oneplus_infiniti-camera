@@ -34,7 +34,7 @@ dontaudit opluscamera_app vendor_xdsp_device:chr_file { getattr ioctl open read 
 
 # Text/OCR and night capture paths traverse /data/vendor/camera for OEM state.
 allow opluscamera_app vendor_camera_data_file:dir { add_name create getattr open read remove_name rmdir search write };
-allow opluscamera_app vendor_camera_data_file:file { create getattr open read rename unlink write };
+allow opluscamera_app vendor_camera_data_file:file { create getattr open read rename setattr unlink write };
 
 # Preview document probing traverses /data/local/tmp while preparing capture.
 allow opluscamera_app shell_data_file:dir search;
@@ -44,6 +44,15 @@ allow opluscamera_app selinuxfs:file { read open };
 
 # ADSP RPC dir search
 allow opluscamera_app adsprpcd_file:dir search;
+
+# FastRPC probes the unsigned shell itself before falling back to the daemon,
+# and watches the DSP library folders for log config changes.
+dontaudit opluscamera_app adsprpcd_file:file read;
+allow opluscamera_app vendor_file:dir watch;
+
+# Adreno and task profiles probe restricted vendor props and cgroups.
+dontaudit opluscamera_app vendor_gpu_prop:file read;
+dontaudit opluscamera_app cgroup:dir search;
 
 # Binder: camera app ↔ camera HAL
 allow opluscamera_app hal_camera_default:binder { call transfer };

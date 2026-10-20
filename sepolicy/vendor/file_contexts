@@ -3,6 +3,7 @@
 # Generic vendor_data_file labels make the logger retry file opens continuously.
 /data/vendor/cam_alog(/.*)?    u:object_r:vendor_camera_data_file:s0
 /data/vendor/camera_process(/.*)?    u:object_r:vendor_camera_data_file:s0
+/data/vendor/camera_remote_dump(/.*)?    u:object_r:vendor_camera_data_file:s0
 
 /(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.cryptoeng@1\.0-service    u:object_r:vendor_hal_cryptoeng_oplus_exec:s0
 
@@ -49,6 +50,8 @@
 /vendor/lib64/libaconfig_storage_read_api_cc\.so    u:object_r:same_process_hal_file:s0
 # Camera image processing also loads this ODM segmentation library in-app.
 /odm/lib64/libOPAlgoCamSegment\.so    u:object_r:same_process_hal_file:s0
+# Document mode preview loads the rectification library in-app.
+/odm/lib64/libDocRectification\.so    u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/sr_models\.bin    u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libarc\.ion\.so    u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libml_util\.so    u:object_r:same_process_hal_file:s0

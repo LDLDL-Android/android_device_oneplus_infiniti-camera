@@ -5,6 +5,9 @@ dontaudit oplusgallery_app adsprpcd_file:file read;
 allow oplusgallery_app vendor_qdsp_device:chr_file { ioctl read };
 allow oplusgallery_app vendor_file:dir watch;
 
+# Optional OPlus framework services (oiface, shoulder pressure) are absent.
+dontaudit oplusgallery_app default_android_service:service_manager find;
+
 # Gallery's RenderThread calls QSPM while setting up the editor preview.
 # Retain the standard HAL client contract, limited to Gallery's domain.
 hal_client_domain(oplusgallery_app, vendor_hal_qspmhal)
