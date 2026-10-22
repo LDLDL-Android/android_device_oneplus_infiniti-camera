@@ -6,6 +6,7 @@ my_product/app/OplusCamera/OplusCamera.apk:system_ext/priv-app/OplusCamera/Oplus
 my_stock/priv-app/OppoGallery2/OppoGallery2.apk:system_ext/priv-app/OppoGallery2/OppoGallery2.apk
 my_stock/app/FileManager/FileManager.apk:system_ext/app/FileManager/FileManager.apk
 my_stock/app/Melody/Melody.apk:system_ext/app/Melody/Melody.apk
+my_product/del-app/ConsumerIRApp/ConsumerIRApp.apk:system_ext/app/ConsumerIRApp/ConsumerIRApp.apk;PRESIGNED
 my_stock/app/ambientalert/ambientalert.apk:system_ext/app/ambientalert/ambientalert.apk
 my_stock/priv-app/UMS/UMS.apk:system_ext/priv-app/UMS/UMS.apk
 system_ext/app/SystemUIPlugin/SystemUIPlugin.apk
